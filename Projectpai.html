@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Saya</title>
+    
+    
+<!-- Kenapa Di cek Pak kode saya ? Kepo ya hhhh -->
+    
+    
+    <style>
+        /* Global Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+        }
+
+        /* Welcome Screen */
+        .welcome-screen {
+            height: 100vh;
+            background-image: url('welcom.jpg');
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .welcome-text h1 {
+            font-size: 3rem;
+            color: white;
+        }
+
+        .welcome-text button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .welcome-text button:hover {
+            background-color: #ff4500;
+        }
+
+        /* Main Content (after splash screen) */
+        .main-content {
+            display: none;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(to right, #ff6347, #ff4500);
+            padding: 15px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: inline-flex;
+            gap: 30px;
+        }
+
+        header nav ul li {
+            display: inline;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: #f0e68c;
+        }
+
+        /* About Section */
+        .profile-info {
+            text-align: center;
+            padding: 100px 50px;
+        }
+
+        .profile-img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .profile-info h2 {
+            font-size: 2rem;
+            margin-top: 15px;
+        }
+
+        .profile-info p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .profile-info button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ff6347;
+            border: none;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .profile-info button:hover {
+            background-color: #ff4500;
+        }
+
+        #more-info {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Portfolio Section */
+        #portfolio {
+            text-align: center;
+            padding: 50px;
+            background-color: #f9f9f9;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .gallery img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Contact Section */
+        #contact {
+            text-align: center;
+            padding: 50px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        form input, form textarea {
+            width: 300px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            padding: 10px 20px;
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #ff4500;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Welcome Screen -->
+    <div class="welcome-screen">
+        <div class="welcome-text">
+            <h1>Hiraukan Background</h1>
+            <button onclick="enterSite()">Lanjut Gasih</button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Header -->
+        <header>
+            <nav>
+                <ul>
+                    <li><b>Bisnis Digital</b></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- About Section -->
+        <section id="about">
+            <div class="profile-info">
+                <img src="dananjaya.jpg" alt="Profile Picture" class="profile-img">
+                <h2>[ Danan Jaya ]</h2>
+                <p>Saya adalah seorang newbie dengan pengalaman tidak lebih dari 3 tahun di bidang * web design dan hardware maupun software . Saya memiliki skil dalam Menjahili teman dengan menggunakan script.</p>
+                <button onclick="showMoreInfo()">Selengkapnya tentang Danan Jaya</button>
+            </div>
+            <div id="more-info" style="display:none;">
+                <p>Berdomisili di simpang priuk dan berasal dari muratara kec.nibung dan lahir pada tgl 31-12-2005</p>
+                <h3>Pengalaman kerja</h3>
+                <p>Sebagai siswa magang . di bagian bookmark dan mempelajari berbagai software dalam mengadiministrasikan komputer seperti ms.word exell dan power point</p>
+                <p>Selebihnya Ytta</p>
+                <br>
+                                <h3>Skill</h3>
+                                <br>
+                <p>Html      : 75%</p>
+                <br>
+                <p>css       : 25%</p>
+                <br>
+                <p>js        : 15%</p>
+                <br>
+                <p>microsoft : 40%</p>
+                <p>Selebihnya Ytta</p>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio">
+            <h2>Motivator Saya</h2>
+            <div class="gallery">
+                <img src="jokowi.jpeg" alt="Project 2" onclick="openLightbox(); currentSlide(2)">
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Kontak Saya</h2>
+            <form>
+                <input type="text" name="name" placeholder="Nama" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <textarea name="message" placeholder="Pesan" required></textarea>
+                <button type="submit">Kirim</button>
+            </form>
+        </section>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        function enterSite() {
+            document.querySelector('.welcome-screen').style.display = 'none';
+            document.querySelector('.main-content').style.display = 'block';
+        }
+
+        function showMoreInfo() {
+            var moreInfo = document.getElementById("more-info");
+            if (moreInfo.style.display === "none") {
+                moreInfo.style.display = "block";
+            } else {
+                moreInfo.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
